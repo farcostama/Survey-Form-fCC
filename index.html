@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programming Languages & Web Frameworks Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-overlay" aria-hidden="true"></div>
+
+    <header class="wrapper">
+      <h1 id="title">Programming Languages & Web Frameworks Survey</h1>
+      <p id="description">Thanks for participating — please complete the survey below.</p>
+    </header>
+
+    <main class="wrapper">
+      <form id="survey-form" action="#" method="post" autocomplete="on" aria-describedby="description">
+        <div class="form-control">
+          <label id="name-label" for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required />
+        </div>
+
+        <div class="form-control">
+          <label id="email-label" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required />
+        </div>
+
+        <div class="form-control">
+          <label id="number-label" for="number">Age <span class="muted">(optional)</span></label>
+          <input id="number" name="age" type="number" inputmode="numeric" min="15" max="60" step="1" placeholder="Age" title="Please enter an age between 15 and 60" />
+        </div>
+
+        <fieldset class="form-control">
+          <legend>What is your experience level?</legend>
+          <label class="option"><input type="radio" name="experience" value="beginner" checked /> <span>Beginner</span></label>
+          <label class="option"><input type="radio" name="experience" value="intermediate" /> <span>Intermediate</span></label>
+          <label class="option"><input type="radio" name="experience" value="advanced" /> <span>Advanced</span></label>
+        </fieldset>
+
+        <fieldset class="form-control">
+          <legend>What is your primary focus?</legend>
+          <label class="option"><input type="radio" name="focus" value="frontend" checked /> <span>Front-end</span></label>
+          <label class="option"><input type="radio" name="focus" value="backend" /> <span>Back-end</span></label>
+          <label class="option"><input type="radio" name="focus" value="fullstack" /> <span>Full-stack</span></label>
+        </fieldset>
+
+        <div class="form-control">
+          <label for="dropdown">What is your favorite programming language?</label>
+          <select id="dropdown" name="language" required>
+            <option value="" disabled selected hidden>Select a language</option>
+            <option value="javascript">JavaScript</option>
+            <option value="typescript">TypeScript</option>
+            <option value="python">Python</option>
+            <option value="php">PHP</option>
+            <option value="java">Java</option>
+            <option value="go">Go</option>
+            <option value="ruby">Ruby</option>
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+            <option value="rust">Rust</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <label for="favorite">What is your favorite framework?</label>
+          <select id="favorite" name="framework" required>
+            <option value="" disabled selected hidden>Select a framework</option>
+            <optgroup label="Front-end">
+              <option value="react">React</option>
+              <option value="vue">Vue</option>
+              <option value="angular">Angular</option>
+              <option value="svelte">Svelte</option>
+              <option value="nextjs">Next.js</option>
+              <option value="nuxt">Nuxt</option>
+            </optgroup>
+            <optgroup label="Back-end">
+              <option value="express">Express.js</option>
+              <option value="nestjs">NestJS</option>
+              <option value="laravel">Laravel</option>
+              <option value="django">Django</option>
+              <option value="fastapi">FastAPI</option>
+              <option value="spring">Spring Boot</option>
+              <option value="rails">Ruby on Rails</option>
+              <option value="gin">Gin (Go)</option>
+              <option value="fiber">Fiber (Go)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <fieldset class="form-control">
+          <legend>How satisfied are you with your current language & framework?</legend>
+          <label class="option"><input type="radio" name="satisfaction" value="very-satisfied" checked /> <span>Very satisfied</span></label>
+          <label class="option"><input type="radio" name="satisfaction" value="satisfied" /> <span>Satisfied</span></label>
+          <label class="option"><input type="radio" name="satisfaction" value="neutral" /> <span>Neutral</span></label>
+          <label class="option"><input type="radio" name="satisfaction" value="unsatisfied" /> <span>Unsatisfied</span></label>
+        </fieldset>
+
+        <fieldset class="form-control">
+          <legend>Which topics are you most interested in next? <span class="muted">(Check all that apply)</span></legend>
+          <label class="option"><input type="checkbox" name="topics" value="language-fundamentals" /> <span>Language Fundamentals (JS/TS, Python, PHP, Java, Go)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="frontend-ui" /> <span>Front-end UI & Components</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="fullstack-examples" /> <span>Full-stack Examples (Next.js / Nuxt)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="backend-apis" /> <span>Back-end & APIs (Express, Django, Laravel, Spring)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="typescript" /> <span>TypeScript</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="testing" /> <span>Testing (Jest, Vitest, Playwright)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="performance" /> <span>Performance Optimization</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="state-management" /> <span>State Management Patterns</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="build-tools" /> <span>Build Tools & Bundlers (Vite, Webpack, Rollup)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="databases-orms" /> <span>Databases & ORMs (PostgreSQL, Prisma, Sequelize)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="devops-deploy" /> <span>DevOps & Deployment (Docker, CI/CD)</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="security" /> <span>Security Essentials</span></label>
+          <label class="option"><input type="checkbox" name="topics" value="docs-best-practices" /> <span>Documentation & Best Practices</span></label>
+        </fieldset>
+
+        <div class="form-control">
+          <label for="comments">Any additional notes or preferences?</label>
+          <textarea id="comments" name="comments" rows="5" placeholder="Tell us what would help you learn better..."></textarea>
+        </div>
+
+        <div class="form-control">
+          <button id="submit" type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
